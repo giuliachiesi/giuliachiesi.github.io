@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { useI18n } from '../i18n/LangContext.jsx';
 import { PROJECTS } from '../data/projects.js';
 import { THUMBS } from '../data/thumbs.jsx';
+import { asset } from '../lib/asset.js';
 
 const norm = (s) => s.toLowerCase().replace(/[\s/]/g, '');
 
@@ -54,7 +55,11 @@ export default function Portfolio() {
             data-cursor-label={lang === 'it' ? 'Apri →' : 'Open →'}
           >
             <div className="cover">
-              <div className="placeholder">{THUMBS[p.thumb]}</div>
+              <div className="placeholder">
+                {p.cover
+                  ? <img src={asset(p.cover)} alt={p.title[lang]} loading="lazy" decoding="async" />
+                  : THUMBS[p.thumb]}
+              </div>
               <div className="label-top">
                 <span className="circle" />
                 <span>{p.index} / {String(filtered.length).padStart(2, '0')}</span>

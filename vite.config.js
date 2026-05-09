@@ -1,9 +1,9 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
-// Set BASE_PATH at deploy time. For user/organization Pages site (giuliachiesi.github.io)
-// leave it as '/'. For project Pages (USER.github.io/portfolio_giulia/) set '/portfolio_giulia/'.
-const base = process.env.BASE_PATH || '/portfolio_giulia/';
+// Default '/' for user Pages site (giuliachiesi.github.io). Override with
+// BASE_PATH=/repo-name/ at build time only for project-Pages deploys.
+const base = process.env.BASE_PATH || '/';
 
 export default defineConfig({
   base,

@@ -3,6 +3,7 @@ import { useParams, useNavigate, Link } from 'react-router-dom';
 import { useI18n } from '../i18n/LangContext.jsx';
 import { PROJECTS } from '../data/projects.js';
 import { THUMBS } from '../data/thumbs.jsx';
+import { asset } from '../lib/asset.js';
 
 export default function CaseStudy() {
   const { id } = useParams();
@@ -38,7 +39,11 @@ export default function CaseStudy() {
       </div>
 
       <div className="case-cover">
-        <div style={{ position: 'absolute', inset: 0 }}>{THUMBS[project.thumb]}</div>
+        <div style={{ position: 'absolute', inset: 0 }}>
+          {project.cover
+            ? <img src={asset(project.cover)} alt={project.title[lang]} loading="eager" decoding="async" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+            : THUMBS[project.thumb]}
+        </div>
         <span className="label" style={{ position: 'relative', zIndex: 2, background: 'rgba(0,0,0,.4)', padding: '8px 14px', borderRadius: 2 }}>
           ◦ Cover
         </span>
@@ -67,13 +72,29 @@ export default function CaseStudy() {
       </div>
 
       <div className="gallery">
-        <div className="g g-1" data-cursor="big">
-          <div style={{ width: '100%', height: '100%', position: 'relative' }}>{THUMBS[project.thumb]}</div>
-        </div>
-        <div className="g g-2" data-cursor="big" />
-        <div className="g g-3" data-cursor="big" />
-        <div className="g g-4" data-cursor="big" />
-        <div className="g g-5" data-cursor="big" />
+        {(project.gallery && project.gallery.length > 0) ? (
+          project.gallery.map((src, i) => (
+            <div className={`g g-${i + 1}`} key={src} data-cursor="big">
+              <img
+                src={asset(src)}
+                alt={`${project.title[lang]} — ${i + 1}`}
+                loading="lazy"
+                decoding="async"
+                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+              />
+            </div>
+          ))
+        ) : (
+          <>
+            <div className="g g-1" data-cursor="big">
+              <div style={{ width: '100%', height: '100%', position: 'relative' }}>{THUMBS[project.thumb]}</div>
+            </div>
+            <div className="g g-2" data-cursor="big" />
+            <div className="g g-3" data-cursor="big" />
+            <div className="g g-4" data-cursor="big" />
+            <div className="g g-5" data-cursor="big" />
+          </>
+        )}
       </div>
 
       <div

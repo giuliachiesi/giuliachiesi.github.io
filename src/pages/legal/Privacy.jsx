@@ -31,7 +31,7 @@ function It({ t }) {
         <h2>2. Tipologie di dati trattati</h2>
         <ul>
           <li><strong>Dati di navigazione</strong>: IP, user-agent, pagine visitate. Trattati solo in modo aggregato e per il tempo strettamente necessario alla diagnostica e alla sicurezza del Sito.</li>
-          <li><strong>Dati forniti volontariamente</strong> tramite il modulo di contatto: nome, email, oggetto, contenuto del messaggio.</li>
+          <li><strong>Dati forniti volontariamente</strong> contattando il Titolare via email: nome, indirizzo email e contenuto del messaggio inviato.</li>
           <li><strong>Cookie e identificatori</strong>: vedi la <a href="/cookie">Cookie policy</a> per il dettaglio.</li>
         </ul>
 
@@ -77,7 +77,7 @@ function It({ t }) {
 
         <h2>7. Conferimento dei dati</h2>
         <p>
-          Il conferimento dei dati nel modulo di contatto è facoltativo, ma necessario per ricevere risposta:
+          Il conferimento dei dati tramite email è facoltativo, ma necessario per ricevere risposta:
           il mancato conferimento impedisce il riscontro alla richiesta.
         </p>
 
@@ -108,7 +108,7 @@ function En({ t }) {
         <h2>2. Categories of data</h2>
         <ul>
           <li><strong>Navigation data</strong>: IP, user-agent, pages visited. Processed only in aggregate, strictly for diagnostics and security.</li>
-          <li><strong>Data provided voluntarily</strong> via the contact form: name, email, subject, message.</li>
+          <li><strong>Data provided voluntarily</strong> by emailing the controller: name, email address and the content of the message.</li>
           <li><strong>Cookies and identifiers</strong>: see the <a href="/cookie">Cookie policy</a>.</li>
         </ul>
 
@@ -140,7 +140,7 @@ function En({ t }) {
           or your local supervisory authority.</p>
 
         <h2>7. Provision of data</h2>
-        <p>Providing data via the contact form is optional but necessary to receive a reply.</p>
+        <p>Providing data by email is optional but necessary to receive a reply.</p>
 
         <h2>8. Updates</h2>
         <p>This notice may be updated. The date above is the effective date.</p>

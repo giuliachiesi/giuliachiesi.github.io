@@ -92,16 +92,6 @@ export const I18N = {
       h1_1: 'Progetti in mente?',
       h1_em: 'Parliamone.',
       intro: 'Rispondo entro 48 ore. Freelance, collaborazioni, tirocini — scrivimi una riga, ti richiamo.',
-      form: {
-        name: 'Nome e cognome',
-        email: 'Email',
-        subject: 'Di cosa parliamo',
-        message: 'Raccontami del progetto',
-        send: 'Invia messaggio',
-        sent: 'Grazie, ti rispondo presto',
-        consent: 'Ho letto la <a href="/privacy">privacy policy</a> e acconsento al trattamento dei miei dati personali per essere ricontattata/o (art. 6 GDPR).',
-        consentRequired: 'Per inviare il messaggio devi acconsentire al trattamento dei dati.',
-      },
       mail: 'ciao@giuliachiesi.it',
       blocks: [
         { h: 'Email', lines: ['ciao@giuliachiesi.it'] },
@@ -230,16 +220,6 @@ export const I18N = {
       h1_1: 'Got a project',
       h1_em: 'in mind?',
       intro: "I reply within 48 hours. Freelance, collaborations, internships — drop me a line, I'll get back.",
-      form: {
-        name: 'Full name',
-        email: 'Email',
-        subject: "What's it about",
-        message: 'Tell me about the project',
-        send: 'Send message',
-        sent: "Thanks, I'll get back soon",
-        consent: 'I have read the <a href="/privacy">privacy policy</a> and consent to the processing of my personal data to be contacted back (art. 6 GDPR).',
-        consentRequired: 'You must consent to the processing of your data to send the message.',
-      },
       mail: 'ciao@giuliachiesi.it',
       blocks: [
         { h: 'Email', lines: ['ciao@giuliachiesi.it'] },

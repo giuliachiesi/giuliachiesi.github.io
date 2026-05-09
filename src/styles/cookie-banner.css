@@ -1,0 +1,81 @@
+.cookie-banner {
+  position: fixed;
+  left: clamp(12px, 2vw, 24px);
+  right: clamp(12px, 2vw, 24px);
+  bottom: clamp(12px, 2vw, 24px);
+  z-index: 9000;
+  background: var(--paper);
+  color: var(--ink);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, .18);
+  padding: clamp(18px, 2.4vw, 28px);
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: clamp(16px, 2vw, 28px);
+  align-items: center;
+  max-width: 980px;
+  margin: 0 auto;
+  animation: cb-slide .4s var(--ease-out) both;
+}
+@keyframes cb-slide {
+  from { transform: translateY(20px); opacity: 0; }
+  to   { transform: translateY(0);    opacity: 1; }
+}
+.cookie-banner h2 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 16px;
+  margin: 0 0 8px;
+  letter-spacing: -.01em;
+}
+.cookie-banner p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--mute);
+  max-width: 64ch;
+}
+.cookie-banner p a { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
+.cookie-banner .actions {
+  display: flex; gap: 8px; flex-wrap: wrap; justify-content: flex-end;
+}
+.cookie-banner button {
+  font-family: var(--font-display); font-weight: 500; font-size: 13px;
+  padding: 11px 20px;
+  border-radius: 999px;
+  border: 1px solid var(--ink);
+  background: transparent; color: var(--ink);
+  white-space: nowrap;
+  transition: all .25s var(--ease);
+}
+.cookie-banner button:hover { background: var(--ink); color: var(--paper); }
+.cookie-banner button.primary { background: var(--ink); color: var(--paper); }
+.cookie-banner button.primary:hover { background: var(--accent); border-color: var(--accent); }
+.cookie-banner .link,
+.cookie-banner button.link {
+  display: inline-flex; align-items: center;
+  font-family: var(--font-display); font-weight: 500; font-size: 13px;
+  border: 0; padding: 11px 8px; text-decoration: underline; text-underline-offset: 3px;
+  color: var(--ink); background: transparent;
+}
+.cookie-banner .link:hover,
+.cookie-banner button.link:hover { background: transparent; color: var(--accent); }
+
+.cookie-fab {
+  position: fixed; left: 16px; bottom: 16px; z-index: 8000;
+  width: 40px; height: 40px; border-radius: 50%;
+  border: 1px solid var(--line);
+  background: var(--paper); color: var(--ink);
+  display: grid; place-items: center;
+  font-size: 16px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, .08);
+  transition: all .25s var(--ease);
+}
+.cookie-fab:hover { background: var(--ink); color: var(--paper); }
+
+@media (max-width: 720px) {
+  .cookie-banner { grid-template-columns: 1fr; }
+  .cookie-banner .actions { justify-content: stretch; }
+  .cookie-banner .actions button { flex: 1 1 auto; }
+}

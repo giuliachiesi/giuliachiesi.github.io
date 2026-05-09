@@ -1,0 +1,36 @@
+.cursor {
+  position: fixed; top: 0; left: 0;
+  width: 12px; height: 12px;
+  border-radius: 50%;
+  background: var(--ink);
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: width .3s var(--ease), height .3s var(--ease), background .3s var(--ease), border-radius .3s var(--ease);
+  mix-blend-mode: difference;
+}
+.cursor.big { width: 72px; height: 72px; background: var(--paper); }
+.cursor.link { width: 44px; height: 44px; background: var(--accent); mix-blend-mode: normal; }
+
+.cursor-label {
+  position: fixed; top: 0; left: 0;
+  pointer-events: none; z-index: 9999;
+  transform: translate(-50%, -50%);
+  font-family: var(--font-mono); font-size: 10px; letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--paper);
+  opacity: 0; transition: opacity .2s;
+}
+.cursor-label.visible { opacity: 1; }
+
+.wipe {
+  position: fixed; inset: 0;
+  background: var(--ink);
+  z-index: 9990;
+  transform: scaleY(0); transform-origin: top;
+  pointer-events: none;
+}
+.wipe.in  { animation: wipe-in  .55s var(--ease-out) forwards; }
+.wipe.out { animation: wipe-out .55s var(--ease-out) forwards; }
+@keyframes wipe-in  { from { transform: scaleY(0); transform-origin: bottom; } to { transform: scaleY(1); transform-origin: bottom; } }
+@keyframes wipe-out { from { transform: scaleY(1); transform-origin: top; }    to { transform: scaleY(0); transform-origin: top; } }

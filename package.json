@@ -1,0 +1,24 @@
+{
+  "name": "portfolio-giulia",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Portfolio personale di Giulia Chiesi — graphic designer.",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist -m \"deploy: $(date +%Y-%m-%d)\""
+  },
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-router-dom": "^7.1.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "gh-pages": "^6.2.0",
+    "vite": "^6.0.0"
+  }
+}

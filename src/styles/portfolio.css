@@ -1,0 +1,106 @@
+.portfolio {
+  padding: clamp(40px, 6vw, 80px) 0 0;
+  position: relative;
+}
+.portfolio-head {
+  padding: 0 var(--pad-x);
+  padding-bottom: clamp(30px, 4vw, 56px);
+  display: grid; grid-template-columns: 1.2fr 1fr;
+  gap: 40px;
+  align-items: end;
+}
+.portfolio-head h1 {
+  font-family: var(--font-display);
+  font-weight: 300;
+  font-size: clamp(48px, 10vw, 160px);
+  letter-spacing: -.04em;
+  line-height: .9;
+  margin: 0;
+}
+.portfolio-filters {
+  display: flex; gap: 10px; flex-wrap: wrap;
+  font-family: var(--font-mono); font-size: 11px; letter-spacing: .1em;
+  text-transform: uppercase;
+}
+.portfolio-filters button {
+  padding: 8px 14px;
+  border: 1px solid var(--line); border-radius: 999px;
+  transition: all .25s var(--ease);
+}
+.portfolio-filters button.active,
+.portfolio-filters button:hover { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(420px, 100%), 1fr));
+  gap: clamp(24px, 3vw, 48px);
+  padding: clamp(30px, 5vw, 60px) var(--pad-x) clamp(40px, 5vw, 60px);
+}
+
+.project-card {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: 20px;
+  cursor: pointer;
+}
+.project-card .cover {
+  aspect-ratio: 5 / 4;
+  overflow: hidden;
+  border-radius: 2px;
+  position: relative;
+  background: color-mix(in srgb, var(--ink) 6%, var(--paper));
+}
+.project-card .cover .placeholder {
+  position: absolute; inset: 0;
+  display: grid; place-items: center;
+  transition: transform .8s var(--ease-out);
+}
+.project-card:hover .cover .placeholder { transform: scale(1.05); }
+
+.project-card .label-top {
+  position: absolute; top: 20px; left: 20px;
+  font-family: var(--font-mono); font-size: 10px; letter-spacing: .14em;
+  text-transform: uppercase;
+  display: flex; gap: 16px; flex-wrap: wrap;
+}
+.project-card .label-top .circle {
+  width: 8px; height: 8px; border-radius: 50%; background: var(--accent);
+  display: inline-block;
+}
+
+.project-card .body {
+  display: grid; grid-template-columns: 1fr auto; gap: 16px;
+  align-items: end;
+  padding-top: 8px;
+  border-top: 1px solid var(--line);
+}
+.project-card h3 {
+  font-family: var(--font-display);
+  font-weight: 300;
+  font-size: clamp(26px, 3.6vw, 48px);
+  letter-spacing: -.03em;
+  margin: 14px 0 8px;
+  line-height: 1;
+}
+.project-card .tags {
+  display: flex; gap: 10px; flex-wrap: wrap;
+  font-family: var(--font-mono); font-size: 10px; letter-spacing: .12em;
+  text-transform: uppercase; color: var(--mute);
+  margin-top: 10px;
+}
+.project-card .go {
+  width: 44px; height: 44px; border-radius: 50%;
+  border: 1px solid var(--line);
+  display: grid; place-items: center;
+  transition: all .3s var(--ease);
+  align-self: end;
+  flex-shrink: 0;
+}
+.project-card:hover .go {
+  background: var(--accent); border-color: var(--accent); color: var(--accent-ink);
+  transform: rotate(-45deg);
+}
+
+@media (max-width: 900px) {
+  .portfolio-head { grid-template-columns: 1fr; }
+}

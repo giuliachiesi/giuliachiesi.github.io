@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <title>404 — Giulia Chiesi</title>
+  <meta http-equiv="refresh" content="0; url=./" />
+  <script>
+    // GitHub Pages doesn't know our SPA routes — bounce 404s to the SPA root,
+    // appending the original path as a hash so the HashRouter can pick it up.
+    (function () {
+      var path = location.pathname.replace(/^\/+/, '');
+      var base = '';
+      // Inferred at deploy time via Vite base; mirror logic here.
+      var match = path.match(/^[^/]+\//);
+      if (match) base = match[0];
+      var rest = path.slice(base.length);
+      location.replace('/' + base + (rest ? '#/' + rest : ''));
+    })();
+  </script>
+</head>
+<body></body>
+</html>

@@ -49,28 +49,6 @@ export default function CaseStudy() {
         </span>
       </div>
 
-      <div className="process">
-        <h2>{t.caseStudy.processTitle}</h2>
-        <div className="process-steps">
-          {t.caseStudy.steps.map((s, i) => (
-            <div className="step" key={i}>
-              <span className="n">{s.n}</span>
-              <div>
-                <h3>{s.h}</h3>
-                <p>{s.p}</p>
-                <div className="artifacts">
-                  {[0, 1, 2].map((k) => (
-                    <div className="artifact" key={k} data-cursor="big">
-                      ◦ {t.caseStudy.artifact} / 0{i + 1}.{k + 1}
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-
       <div className="gallery">
         {(project.gallery && project.gallery.length > 0) ? (
           project.gallery.map((src, i) => (

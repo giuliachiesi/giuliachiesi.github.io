@@ -1,6 +1,6 @@
 import { useI18n } from '../i18n/LangContext.jsx';
 import { asset } from '../lib/asset.js';
-const portrait = asset('assets/giulia-portrait.jpg');
+const portrait = asset('assets/giulia-portrait.webp');
 
 export default function About() {
   const { t, lang } = useI18n();

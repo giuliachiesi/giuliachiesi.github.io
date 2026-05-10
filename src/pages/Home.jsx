@@ -4,7 +4,7 @@ import { useI18n } from '../i18n/LangContext.jsx';
 import { PROJECTS } from '../data/projects.js';
 import { THUMBS } from '../data/thumbs.jsx';
 import { asset } from '../lib/asset.js';
-const portrait = asset('assets/giulia-portrait.jpg');
+const portrait = asset('assets/giulia-portrait.webp');
 
 export default function Home() {
   const { t, lang } = useI18n();
@@ -32,15 +32,12 @@ export default function Home() {
         <div className="hero-meta">
           <span>{t.hero.tagline}</span>
           <span>{t.hero.loc}</span>
-          <span className="dot-live">{t.hero.status}</span>
         </div>
 
         <div className="hero-grid">
           <h1 className="hero-title">
             {t.hero.greet}<br />
-            <em>Giulia</em>,<br />
-            <span className="strike">graphic</span><br />
-            designer.
+            <em>Giulia Chiesi</em>
           </h1>
           <div className="hero-portrait" data-cursor="big" data-cursor-label={t.hero.scrolldown}>
             <img src={portrait} alt={t.hero.portraitCaption} loading="eager" decoding="async" />
@@ -118,7 +115,11 @@ export default function Home() {
               data-cursor-label={t.work.cta}
             >
               <div className="thumb">
-                <div className="thumb-inner">{THUMBS[p.thumb]}</div>
+                <div className="thumb-inner">
+                  {p.cover
+                    ? <img src={asset(p.cover)} alt={p.title[lang]} loading="lazy" decoding="async" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                    : THUMBS[p.thumb]}
+                </div>
                 <span className="thumb-index">◦ {p.index}</span>
                 <span className="thumb-cta">{t.work.cta} <span aria-hidden="true">→</span></span>
               </div>

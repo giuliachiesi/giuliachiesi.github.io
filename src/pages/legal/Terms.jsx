@@ -1,6 +1,6 @@
 import { useI18n } from '../../i18n/LangContext.jsx';
 
-const LAST_UPDATE = '2026-05-05';
+const LAST_UPDATE = '2026-05-10';
 
 export default function Terms() {
   const { lang, t } = useI18n();
@@ -14,9 +14,13 @@ function It({ t }) {
         <h1>{t.legal.terms}</h1>
         <p className="meta">{t.legal.lastUpdate}: {LAST_UPDATE}</p>
 
-        <h2>1. Oggetto</h2>
-        <p>I presenti Termini disciplinano l’accesso e l’uso del sito <strong>giuliachiesi.it</strong> (di seguito “Sito”),
-          gestito da <strong>Giulia Chiesi</strong>, Modena (Italia). L’accesso al Sito implica l’accettazione integrale dei presenti Termini.
+        <h2>1. Oggetto e dati identificativi</h2>
+        <p>I presenti Termini disciplinano l’accesso e l’uso del sito raggiungibile agli indirizzi
+          {' '}<strong>giuliachiesi.github.io</strong> e, se attivato in futuro, <strong>giuliachiesi.it</strong> (di seguito “Sito”),
+          gestito da <strong>Giulia Chiesi</strong>, persona fisica residente a Modena (Italia).
+          Ai sensi dell’art. 7 D.lgs. 70/2003 si comunica che il gestore del Sito non è attualmente titolare
+          di partita IVA né iscritto ad albi professionali; per comunicazioni: <a href="mailto:ciao@giuliachiesi.it">ciao@giuliachiesi.it</a>.
+          L’accesso al Sito implica l’accettazione integrale dei presenti Termini, accessibili in ogni momento dal footer.
           In caso di disaccordo, ti invitiamo a non utilizzare il Sito.</p>
 
         <h2>2. Natura dei contenuti</h2>
@@ -44,11 +48,12 @@ function It({ t }) {
           di dati o di profitto derivanti dall’uso o impossibilità d’uso del Sito. Restano ferme le responsabilità inderogabili
           di legge a tutela del consumatore (D.lgs. 206/2005).</p>
 
-        <h2>7. Diritti dei consumatori</h2>
+        <h2>7. Diritti dei consumatori e ADR</h2>
         <p>I presenti Termini non limitano i diritti che ti sono riconosciuti come consumatore dal Codice del Consumo italiano
-          (D.lgs. 206/2005) e dalla normativa UE applicabile, incluso il diritto di accesso alla piattaforma ODR
-          (<a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener noreferrer">ec.europa.eu/consumers/odr</a>) per
-          la risoluzione extragiudiziale delle controversie.</p>
+          (D.lgs. 206/2005) e dalla normativa UE applicabile. Per la risoluzione extragiudiziale delle controversie è possibile
+          rivolgersi agli organismi ADR iscritti negli elenchi tenuti dal Ministero delle Imprese e del Made in Italy
+          (<a href="https://www.mimit.gov.it" target="_blank" rel="noopener noreferrer">mimit.gov.it</a>) e dall’Autorità per
+          le Garanzie nelle Comunicazioni, ove competenti.</p>
 
         <h2>8. Privacy</h2>
         <p>Il trattamento dei dati personali è descritto nella <a href="/privacy">Privacy policy</a> e nella <a href="/cookie">Cookie policy</a>.</p>
@@ -72,9 +77,13 @@ function En({ t }) {
         <h1>{t.legal.terms}</h1>
         <p className="meta">{t.legal.lastUpdate}: {LAST_UPDATE}</p>
 
-        <h2>1. Scope</h2>
-        <p>These Terms govern access to and use of <strong>giuliachiesi.it</strong> (the “Site”), operated by
-          <strong> Giulia Chiesi</strong> (Modena, Italy). Accessing the Site implies acceptance of these Terms.</p>
+        <h2>1. Scope and identification</h2>
+        <p>These Terms govern access to and use of the site reachable at
+          {' '}<strong>giuliachiesi.github.io</strong> and, if later activated, <strong>giuliachiesi.it</strong> (the “Site”),
+          operated by <strong>Giulia Chiesi</strong>, a natural person resident in Modena (Italy).
+          Pursuant to art. 7 D.lgs. 70/2003 the Site operator is not currently registered for VAT nor enrolled in any
+          professional register; contact: <a href="mailto:ciao@giuliachiesi.it">ciao@giuliachiesi.it</a>.
+          Accessing the Site implies acceptance of these Terms, always available from the footer.</p>
 
         <h2>2. Nature of content</h2>
         <p>The Site is informational and showcases a professional portfolio. Content is provided “as is” and can change
@@ -98,9 +107,11 @@ function En({ t }) {
         <p>To the maximum extent permitted by law, Giulia Chiesi is not liable for indirect or consequential damages, loss of
           data or profits arising from use of or inability to use the Site. Mandatory consumer protections remain unaffected.</p>
 
-        <h2>7. Consumer rights</h2>
-        <p>These Terms do not limit rights granted to you as a consumer under the Italian Consumer Code and applicable EU law,
-          including access to the ODR platform (<a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener noreferrer">ec.europa.eu/consumers/odr</a>).</p>
+        <h2>7. Consumer rights and ADR</h2>
+        <p>These Terms do not limit rights granted to you as a consumer under the Italian Consumer Code and applicable EU law.
+          For out-of-court dispute resolution you may contact ADR bodies listed by the Italian Ministry of Enterprise and Made
+          in Italy (<a href="https://www.mimit.gov.it" target="_blank" rel="noopener noreferrer">mimit.gov.it</a>) and, where
+          competent, the Italian Communications Authority (AGCOM).</p>
 
         <h2>8. Privacy</h2>
         <p>Personal-data processing is described in the <a href="/privacy">Privacy policy</a> and <a href="/cookie">Cookie policy</a>.</p>

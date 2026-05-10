@@ -1,7 +1,7 @@
 import { useI18n } from '../../i18n/LangContext.jsx';
 import { useConsent } from '../../hooks/useConsent.js';
 
-const LAST_UPDATE = '2026-05-05';
+const LAST_UPDATE = '2026-05-10';
 
 const CATEGORIES = {
   it: [
@@ -65,15 +65,15 @@ export default function CookiePage() {
             </tr>
           </thead>
           <tbody>
-            <tr><td>gc.lang</td><td>localStorage / first-party</td><td>{lang === 'it' ? 'Memorizza la lingua scelta' : 'Stores chosen language'}</td><td>{lang === 'it' ? 'Persistente' : 'Persistent'}</td></tr>
+            <tr><td>gc.lang</td><td>localStorage / first-party</td><td>{lang === 'it' ? 'Memorizza la lingua scelta. Dato locale al browser, mai trasmesso ad alcun server.' : 'Stores chosen language. Browser-local data, never transmitted to any server.'}</td><td>12 {lang === 'it' ? 'mesi' : 'months'}</td></tr>
             <tr><td>gc.consent.v1</td><td>localStorage / first-party</td><td>{lang === 'it' ? 'Memorizza le tue preferenze sui cookie' : 'Stores your cookie preferences'}</td><td>12 {lang === 'it' ? 'mesi' : 'months'}</td></tr>
           </tbody>
         </table>
 
         <p>
           {lang === 'it'
-            ? 'Il Sito non installa cookie di profilazione, analytics di terze parti, social plugin né strumenti pubblicitari. I font sono caricati da Google Fonts: la richiesta HTTP rivela al provider il tuo IP per il tempo strettamente necessario al caricamento, base giuridica art. 6.1.f GDPR (legittimo interesse a fornire un layout coerente). Il provider non installa cookie sul tuo dispositivo a tale scopo.'
-            : 'The Site does not install profiling cookies, third-party analytics, social plugins or advertising tools. Fonts are loaded from Google Fonts: the HTTP request exposes your IP to the provider strictly for loading, on the basis of Art. 6(1)(f) GDPR (legitimate interest in delivering a consistent layout). The provider does not install cookies on your device for this purpose.'}
+            ? 'Il Sito non installa cookie di profilazione, analytics di terze parti, social plugin né strumenti pubblicitari. I font tipografici sono auto‑ospitati direttamente sul dominio del Sito: nessun caricamento da Google Fonts o da altri CDN di terze parti, e di conseguenza nessun trasferimento dell’indirizzo IP dell’utente verso fornitori esterni per finalità di rendering tipografico. L’unico provider esterno coinvolto è il fornitore di hosting (GitHub Pages), che riceve la richiesta HTTP necessaria a servire le pagine ed eventualmente conserva log tecnici di sicurezza secondo le proprie policy.'
+            : 'The Site does not install profiling cookies, third-party analytics, social plugins or advertising tools. Webfonts are self-hosted on the Site’s own origin: no requests to Google Fonts or any third-party CDN, hence no IP transfer to external providers for typography rendering. The only external provider involved is the hosting provider (GitHub Pages), which receives the HTTP request needed to serve pages and may retain technical security logs per its own policies.'}
         </p>
 
         <div id="cookie-preferences" className="preferences">

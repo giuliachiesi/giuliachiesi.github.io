@@ -8,7 +8,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "predeploy": "npm run build",
+    "predeploy": "BASE_PATH=/portfolio_giulia/ npm run build",
     "deploy": "gh-pages -d dist -m \"deploy: $(date +%Y-%m-%d)\""
   },
   "dependencies": {

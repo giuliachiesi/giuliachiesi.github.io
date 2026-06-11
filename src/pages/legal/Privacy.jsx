@@ -26,7 +26,7 @@ function It({ t }) {
           Titolare del trattamento è <strong>Giulia Chiesi</strong>, persona fisica residente a Modena (Italia),
           attualmente non titolare di partita IVA (attività professionale di natura preparatoria/portfolio,
           al di fuori dell’ambito di applicazione dell’art. 5 D.P.R. 633/1972).
-          Email di contatto: <a href="mailto:ciao@giuliachiesi.it">ciao@giuliachiesi.it</a>.
+          Email di contatto: <a href="mailto:giulia.chiesi18@gmail.com">giulia.chiesi18@gmail.com</a>.
           Per le comunicazioni postali è possibile richiedere l’indirizzo all’email indicata.
           Non ricorrono i presupposti dell’art. 37 GDPR per la nomina di un Responsabile della Protezione
           dei Dati (DPO).
@@ -76,7 +76,7 @@ function It({ t }) {
         <p>
           Hai diritto di chiedere accesso, rettifica, cancellazione, limitazione, opposizione e portabilità (artt. 15‑22 GDPR),
           nonché di revocare il consenso in qualsiasi momento senza pregiudicarne la liceità precedente.
-          Per esercitarli scrivi a <a href="mailto:ciao@giuliachiesi.it">ciao@giuliachiesi.it</a>.
+          Per esercitarli scrivi a <a href="mailto:giulia.chiesi18@gmail.com">giulia.chiesi18@gmail.com</a>.
         </p>
         <p>
           Hai inoltre diritto di proporre reclamo al Garante per la protezione dei dati personali
@@ -125,7 +125,7 @@ function En({ t }) {
         <h2>1. Data controller</h2>
         <p>The controller is <strong>Giulia Chiesi</strong>, a natural person resident in Modena (Italy),
           currently not registered for VAT (preparatory/portfolio activity outside the scope of art. 5 D.P.R. 633/1972).
-          Contact: <a href="mailto:ciao@giuliachiesi.it">ciao@giuliachiesi.it</a>; postal address available on request via email.
+          Contact: <a href="mailto:giulia.chiesi18@gmail.com">giulia.chiesi18@gmail.com</a>; postal address available on request via email.
           The conditions of art. 37 GDPR for the appointment of a Data Protection Officer (DPO) are not met.</p>
 
         <h2>2. Categories of data</h2>
@@ -162,7 +162,7 @@ function En({ t }) {
 
         <h2>6. Your rights</h2>
         <p>You have the right to access, rectify, erase, restrict, object to, and port your data (Arts. 15‑22 GDPR), and
-          to withdraw consent at any time without affecting prior lawfulness. Email <a href="mailto:ciao@giuliachiesi.it">ciao@giuliachiesi.it</a>.</p>
+          to withdraw consent at any time without affecting prior lawfulness. Email <a href="mailto:giulia.chiesi18@gmail.com">giulia.chiesi18@gmail.com</a>.</p>
         <p>You may lodge a complaint with the Italian DPA (<a href="https://www.garanteprivacy.it" target="_blank" rel="noopener noreferrer">garanteprivacy.it</a>)
           or your local supervisory authority (Art. 77 GDPR), and seek effective judicial remedies against the controller
           or a supervisory authority (Arts. 78‑79 GDPR).</p>

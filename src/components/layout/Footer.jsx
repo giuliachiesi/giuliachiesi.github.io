@@ -10,7 +10,7 @@ export default function Footer() {
       <div>
         <h3>{t.footer.big}</h3>
         <Link to="/contact" className="big-mail" data-cursor="link">
-          ciao@giuliachiesi.it
+          giulia.chiesi18@gmail.com
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
             <path d="M5 15 L15 5 M8 5 H15 V12" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
@@ -30,8 +30,6 @@ export default function Footer() {
       <div className="footer-col">
         <h5>{t.footer.social}</h5>
         <ul>
-          <li><a href="https://www.behance.net/" target="_blank" rel="noopener noreferrer" data-cursor="link">Behance ↗</a></li>
-          <li><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" data-cursor="link">Instagram ↗</a></li>
           <li><a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" data-cursor="link">LinkedIn ↗</a></li>
         </ul>
       </div>

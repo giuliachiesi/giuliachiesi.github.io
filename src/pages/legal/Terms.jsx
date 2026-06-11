@@ -19,7 +19,7 @@ function It({ t }) {
           {' '}<strong>giuliachiesi.github.io</strong> e, se attivato in futuro, <strong>giuliachiesi.it</strong> (di seguito “Sito”),
           gestito da <strong>Giulia Chiesi</strong>, persona fisica residente a Modena (Italia).
           Ai sensi dell’art. 7 D.lgs. 70/2003 si comunica che il gestore del Sito non è attualmente titolare
-          di partita IVA né iscritto ad albi professionali; per comunicazioni: <a href="mailto:ciao@giuliachiesi.it">ciao@giuliachiesi.it</a>.
+          di partita IVA né iscritto ad albi professionali; per comunicazioni: <a href="mailto:giulia.chiesi18@gmail.com">giulia.chiesi18@gmail.com</a>.
           L’accesso al Sito implica l’accettazione integrale dei presenti Termini, accessibili in ogni momento dal footer.
           In caso di disaccordo, ti invitiamo a non utilizzare il Sito.</p>
 
@@ -82,7 +82,7 @@ function En({ t }) {
           {' '}<strong>giuliachiesi.github.io</strong> and, if later activated, <strong>giuliachiesi.it</strong> (the “Site”),
           operated by <strong>Giulia Chiesi</strong>, a natural person resident in Modena (Italy).
           Pursuant to art. 7 D.lgs. 70/2003 the Site operator is not currently registered for VAT nor enrolled in any
-          professional register; contact: <a href="mailto:ciao@giuliachiesi.it">ciao@giuliachiesi.it</a>.
+          professional register; contact: <a href="mailto:giulia.chiesi18@gmail.com">giulia.chiesi18@gmail.com</a>.
           Accessing the Site implies acceptance of these Terms, always available from the footer.</p>
 
         <h2>2. Nature of content</h2>

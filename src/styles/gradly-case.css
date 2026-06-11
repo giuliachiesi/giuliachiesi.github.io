@@ -1,0 +1,169 @@
+/* ── Bespoke Gradly case study — replicates the portfolio PDF spread ── */
+.gcase {
+  --gc-blue: var(--accent);
+  font-family: var(--font-display);
+}
+
+/* Break out of the page horizontal padding for full-bleed sections. */
+.gcase > section {
+  margin-left: calc(var(--pad-x) * -1);
+  margin-right: calc(var(--pad-x) * -1);
+  padding-left: var(--pad-x);
+  padding-right: var(--pad-x);
+}
+
+/* Shared display title */
+.gcase-title {
+  margin: 0;
+  font-weight: 500;
+  line-height: .92;
+  letter-spacing: -.03em;
+  font-size: clamp(48px, 9.5vw, 150px);
+}
+.gcase-title.sm { font-size: clamp(40px, 7.5vw, 110px); }
+.gcase-title .bk { display: block; color: var(--ink); }
+.gcase-title .bl { display: block; color: var(--gc-blue); }
+
+/* Blue mono labels */
+.gcase .pair > span,
+.gcase-cap,
+.gcase-masc-labels span {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: .06em;
+  color: var(--gc-blue);
+  text-transform: none;
+}
+
+/* ── 1 · HERO ── */
+.gcase-hero { padding-top: clamp(24px, 4vw, 56px); }
+.gcase-hero-top {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  align-items: center;
+  gap: clamp(24px, 4vw, 64px);
+  padding-bottom: clamp(28px, 4vw, 48px);
+  border-bottom: 1px solid var(--line);
+}
+.gcase-hero-art {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  min-height: clamp(200px, 26vw, 380px);
+}
+.gcase-hero-art .owl {
+  position: relative;
+  z-index: 2;
+  width: clamp(150px, 22vw, 300px);
+  height: auto;
+  margin-right: -6%;
+  filter: drop-shadow(0 18px 30px rgba(43, 32, 90, .18));
+}
+.gcase-hero-art .card {
+  width: clamp(230px, 34vw, 460px);
+  height: auto;
+  border-radius: 22px;
+  background: #fff;
+  box-shadow: 0 30px 60px -20px rgba(11, 11, 11, .28);
+}
+
+.gcase-meta {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.45fr;
+  gap: clamp(28px, 4vw, 56px);
+  padding: clamp(36px, 5vw, 64px) 0 clamp(48px, 7vw, 96px);
+}
+.gcase-meta .mcol { display: flex; flex-direction: column; gap: clamp(28px, 3vw, 44px); }
+.gcase-meta .pair > span { display: block; margin-bottom: 10px; }
+.gcase-meta .pair > p {
+  margin: 0;
+  font-size: clamp(15px, 1.4vw, 18px);
+  line-height: 1.45;
+  color: var(--ink);
+}
+.gcase-meta .pair > p b { font-weight: 600; }
+
+/* ── 2 · WIREFRAME ── */
+.gcase-wire {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: end;
+  gap: clamp(24px, 4vw, 56px);
+  background: #ecebe8;
+  padding-top: clamp(36px, 5vw, 72px);
+  padding-bottom: 0;
+}
+.gcase-wire-left { align-self: center; padding-bottom: clamp(36px, 5vw, 72px); }
+.gcase-cap {
+  display: block;
+  margin: clamp(16px, 2vw, 28px) 0 clamp(18px, 2vw, 30px);
+  color: var(--mute);
+}
+.gcase-wirebox {
+  background: #e2e1dd;
+  border-radius: 16px;
+  padding: clamp(16px, 2vw, 28px);
+}
+.gcase-wirebox img { width: 100%; height: auto; display: block; opacity: .92; }
+.gcase-wire-right { display: flex; justify-content: center; align-items: flex-end; align-self: end; }
+.gcase-wire-right img { width: 100%; max-width: 760px; height: auto; display: block; }
+
+/* ── 3 · MASCOTTE ── */
+.gcase-masc { padding-top: clamp(40px, 5vw, 72px); border-top: 1px solid var(--line); }
+.gcase-masc-head {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: clamp(24px, 4vw, 56px);
+  align-items: start;
+  padding-bottom: clamp(28px, 4vw, 48px);
+  border-bottom: 1px solid var(--line);
+}
+.gcase-masc-desc {
+  margin: 8px 0 0;
+  font-family: var(--font-body);
+  font-size: clamp(14px, 1.2vw, 16px);
+  line-height: 1.6;
+  color: var(--ink);
+  max-width: 42ch;
+  justify-self: end;
+}
+.gcase-masc-desc b { font-weight: 600; }
+.gcase-masc-labels {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(24px, 4vw, 56px);
+  padding: clamp(20px, 2.5vw, 32px) 0;
+  border-bottom: 1px solid var(--line);
+  color: var(--mute);
+}
+.gcase-masc-labels span { color: var(--mute); }
+.gcase-masc-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(24px, 4vw, 56px);
+  align-items: end;
+  padding: clamp(28px, 4vw, 56px) 0 clamp(40px, 6vw, 80px);
+}
+.gcase-masc-row .sketches img,
+.gcase-masc-row .finals img { width: 100%; height: auto; display: block; }
+.gcase-masc-row .finals { display: flex; align-items: flex-end; }
+
+/* ── 4 · SOCIAL ── */
+.gcase-social {
+  background: #aeb5bd;
+  padding-top: clamp(32px, 4vw, 64px);
+  padding-bottom: clamp(32px, 4vw, 64px);
+  text-align: center;
+}
+.gcase-social img { width: 100%; max-width: 1100px; height: auto; display: inline-block; }
+
+/* ── Responsive ── */
+@media (max-width: 860px) {
+  .gcase-hero-top,
+  .gcase-meta,
+  .gcase-wire,
+  .gcase-masc-head { grid-template-columns: 1fr; }
+  .gcase-hero-art { justify-content: center; }
+  .gcase-masc-desc { justify-self: start; }
+}

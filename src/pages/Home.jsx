@@ -149,7 +149,7 @@ export default function Home() {
 
       <section className="ticker">
         <p className="big">{t.ticker.big}</p>
-        <p className="small">{t.ticker.small}</p>
+        {t.ticker.small && <p className="small">{t.ticker.small}</p>}
       </section>
     </div>
   );

@@ -23,8 +23,8 @@ export default function About() {
               <em>{second?.trim()}</em>
             </h1>
             <p dangerouslySetInnerHTML={{ __html: t.about.bio1 }} />
-            <p>{t.about.bio2}</p>
-            <p>{t.about.bio3}</p>
+            {t.about.bio2 && <p>{t.about.bio2}</p>}
+            {t.about.bio3 && <p>{t.about.bio3}</p>}
           </div>
         </div>
 
@@ -64,10 +64,6 @@ export default function About() {
             {t.about.skills.map((s, i) => (
               <div className="skill" key={i}>
                 <span className="label">{s.label}</span>
-                <span className="value-num">{s.val}%</span>
-                <div className="bar">
-                  <div className="fill" style={{ '--pct': s.val / 100 }} />
-                </div>
               </div>
             ))}
           </div>

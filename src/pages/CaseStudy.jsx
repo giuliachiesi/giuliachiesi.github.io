@@ -4,6 +4,11 @@ import { useI18n } from '../i18n/LangContext.jsx';
 import { PROJECTS } from '../data/projects.js';
 import { THUMBS } from '../data/thumbs.jsx';
 import { asset } from '../lib/asset.js';
+import GradlyCase from './cases/GradlyCase.jsx';
+import AeroportoCase from './cases/AeroportoCase.jsx';
+
+// Projects with a bespoke, PDF-faithful layout instead of the generic template.
+const CUSTOM_CASES = { gradly: GradlyCase, aeroporto: AeroportoCase };
 
 export default function CaseStudy() {
   const { id } = useParams();
@@ -16,6 +21,32 @@ export default function CaseStudy() {
 
   useEffect(() => { window.scrollTo({ top: 0 }); }, [id]);
 
+  const Custom = CUSTOM_CASES[project.id];
+  if (Custom) {
+    return (
+      <div className="page page-enter case">
+        <Custom />
+        <div
+          className="next-project"
+          onClick={() => nav(`/work/${next.id}`)}
+          role="button"
+          tabIndex={0}
+          onKeyDown={(e) => { if (e.key === 'Enter') nav(`/work/${next.id}`); }}
+          data-cursor="link"
+          data-cursor-label={lang === 'it' ? 'Prossimo' : 'Next'}
+        >
+          <span className="label">◦ {t.caseStudy.nextLabel}</span>
+          <h3>{next.title[lang]}</h3>
+          <span className="arr" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <path d="M5 15 L15 5 M8 5 H15 V12" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          </span>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="page page-enter case">
       <div className="case-hero">
@@ -26,16 +57,16 @@ export default function CaseStudy() {
         </div>
         <h1>{project.title[lang]}</h1>
         <div className="case-meta">
-          {t.caseStudy.meta.map((m, i) => {
-            const override = i === 1 ? project.year : i === 2 ? project.cat : null;
-            return (
-              <div key={i}>
-                <span>{m.k}</span>
-                <strong>{override || m.v}</strong>
-              </div>
-            );
-          })}
+          {(project.meta?.[lang] || t.caseStudy.meta).map((m, i) => (
+            <div key={i}>
+              <span>{m.k}</span>
+              <strong>{m.v}</strong>
+            </div>
+          ))}
         </div>
+        {project.brief?.[lang] && (
+          <p className="case-brief">{project.brief[lang]}</p>
+        )}
       </div>
 
       <div className="case-cover">

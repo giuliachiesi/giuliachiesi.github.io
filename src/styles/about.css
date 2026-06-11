@@ -43,9 +43,7 @@
 }
 .value {
   padding: 24px 24px 24px 0;
-  border-right: 1px solid var(--line);
 }
-.value:last-child { border-right: none; }
 .value .num {
   font-family: var(--font-mono); font-size: 11px; color: var(--mute);
   letter-spacing: .14em;

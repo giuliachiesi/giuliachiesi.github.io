@@ -30,7 +30,7 @@ export default function Footer() {
       <div className="footer-col">
         <h5>{t.footer.social}</h5>
         <ul>
-          <li><a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" data-cursor="link">LinkedIn ↗</a></li>
+          <li><a href="https://www.linkedin.com/in/giulia-chiesi-52b9772b8" target="_blank" rel="noopener noreferrer" data-cursor="link">LinkedIn ↗</a></li>
         </ul>
       </div>
 

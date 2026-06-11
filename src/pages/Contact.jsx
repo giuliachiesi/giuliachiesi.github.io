@@ -35,7 +35,7 @@ export default function Contact() {
                   if (lower === 'social') {
                     const url = l === 'Behance' ? 'https://www.behance.net/'
                       : l === 'Instagram' ? 'https://www.instagram.com/'
-                      : 'https://www.linkedin.com/';
+                      : 'https://www.linkedin.com/in/giulia-chiesi-52b9772b8';
                     return <a key={k} href={url} target="_blank" rel="noopener noreferrer" data-cursor="link">{l} ↗</a>;
                   }
                   return <p key={k}>{l}</p>;

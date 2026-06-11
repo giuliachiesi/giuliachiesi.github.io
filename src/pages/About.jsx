@@ -39,7 +39,7 @@ export default function About() {
         </div>
 
         <div className="timeline">
-          <div className="section-head" style={{ marginBottom: 32, paddingBottom: 24, borderBottom: '1px solid var(--line)' }}>
+          <div className="section-head" style={{ marginBottom: 32, paddingBottom: 24 }}>
             <span className="section-eyebrow">◦ {lang === 'it' ? 'Percorso' : 'Path'}</span>
             <h2 className="section-title">{t.about.timelineTitle}</h2>
             <span className="section-count">04</span>
@@ -55,7 +55,7 @@ export default function About() {
         </div>
 
         <div className="skills">
-          <div className="section-head" style={{ marginBottom: 32, paddingBottom: 24, borderBottom: '1px solid var(--line)' }}>
+          <div className="section-head" style={{ marginBottom: 32, paddingBottom: 24 }}>
             <span className="section-eyebrow">◦ Software</span>
             <h2 className="section-title">{t.about.skillsTitle}</h2>
             <span className="section-count">06</span>

@@ -8,7 +8,7 @@ export const PROJECTS = [
     id: 'gradly', index: '01', cat: 'UI/UX', year: '2026',
     title: { it: 'Applicazione Gradly', en: 'Gradly app' },
     sub: { it: 'App EdTech per la Maturità', en: 'EdTech app for final exams' },
-    tags: ['UI/UX', 'Branding', 'Mobile'], thumb: 'gradly',
+    tags: ['UI/UX', 'Branding', 'Social'], thumb: 'gradly',
     cover: 'assets/gradly/mockup-app-gradly-mano.webp',
     // Gradly uses a bespoke layout (see GradlyCase.jsx); gallery kept for
     // completeness/fallback only.
@@ -42,7 +42,7 @@ export const PROJECTS = [
     id: 'aeroporto', index: '02', cat: 'Branding', year: '2026',
     title: { it: 'Aeroporto G. Marconi', en: 'G. Marconi Airport' },
     sub: { it: 'Rebranding e campagna', en: 'Rebranding and campaign' },
-    tags: ['Branding', 'Illustration'], thumb: 'robot',
+    tags: ['UI/UX', 'Branding', 'Illustration'], thumb: 'robot',
     cover: 'assets/aeroporto/mockup-macbook-sito-aeroporto.webp',
     gallery: [
       'assets/aeroporto/mascotte-rondine-pose.webp',
@@ -77,7 +77,7 @@ export const PROJECTS = [
     id: 'virginactive', index: '03', cat: 'Illustration', year: '2024',
     title: { it: 'Manifesto Virgin Active', en: 'Virgin Active poster' },
     sub: { it: 'Run for Fun — running marathon', en: 'Run for Fun — running marathon' },
-    tags: ['Illustration', 'Poster', 'Branding'], thumb: 'runforfun',
+    tags: ['Illustration', 'Branding'], thumb: 'runforfun',
     cover: 'assets/virgin-active/mockup-poster-run-for-fun.webp',
     gallery: [
       'assets/virgin-active/poster-run-for-fun.webp',

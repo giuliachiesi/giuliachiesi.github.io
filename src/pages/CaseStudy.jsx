@@ -6,9 +6,18 @@ import { THUMBS } from '../data/thumbs.jsx';
 import { asset } from '../lib/asset.js';
 import GradlyCase from './cases/GradlyCase.jsx';
 import AeroportoCase from './cases/AeroportoCase.jsx';
+import VirginActiveCase from './cases/VirginActiveCase.jsx';
+import RobotCase from './cases/RobotCase.jsx';
+import KoreaCase from './cases/KoreaCase.jsx';
 
 // Projects with a bespoke, PDF-faithful layout instead of the generic template.
-const CUSTOM_CASES = { gradly: GradlyCase, aeroporto: AeroportoCase };
+const CUSTOM_CASES = {
+  gradly: GradlyCase,
+  aeroporto: AeroportoCase,
+  virginactive: VirginActiveCase,
+  robot: RobotCase,
+  korea: KoreaCase,
+};
 
 export default function CaseStudy() {
   const { id } = useParams();

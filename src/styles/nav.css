@@ -21,6 +21,11 @@
   display: inline-block;
   animation: pulse 2.4s ease-in-out infinite;
 }
+.nav-brand .nav-logo {
+  height: 22px; width: auto;
+  display: inline-block;
+  object-fit: contain;
+}
 @keyframes pulse {
   0%, 100% { transform: scale(1); opacity: 1; }
   50%      { transform: scale(1.4); opacity: .5; }

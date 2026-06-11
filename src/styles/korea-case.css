@@ -1,0 +1,30 @@
+/* ── Bespoke Libro ricette coreane case study (extends .gcase) ── */
+
+/* Title mixes black/blue inline ("Libro ricette" / "coreane") */
+.kcase-title .bk,
+.kcase-title .bl { display: inline; }
+
+/* Hero art = book cover mockup, tall */
+.kcase .gcase-hero-top { align-items: stretch; }
+.kcase .gcase-hero-art {
+  justify-content: flex-end;
+  align-items: stretch;
+  min-height: clamp(320px, 42vw, 600px);
+}
+.kcase .gcase-hero-art .book {
+  width: 100%;
+  max-width: 470px;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 4px;
+}
+
+/* 2 · Book interior spread, full-bleed */
+.kcase-spread {
+  background: #d9d9d9;
+  padding-top: clamp(28px, 4vw, 56px);
+  padding-bottom: clamp(28px, 4vw, 56px);
+  text-align: center;
+}
+.kcase-spread img { width: 100%; max-width: 1140px; height: auto; display: inline-block; }

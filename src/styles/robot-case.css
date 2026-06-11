@@ -1,0 +1,35 @@
+/* ── Bespoke Manifesto Robot Festival case study (extends .gcase) ── */
+
+/* Hero art = tall poster artwork */
+.rcase .gcase-hero-top { align-items: stretch; }
+.rcase .gcase-hero-art {
+  justify-content: flex-end;
+  align-items: stretch;
+  min-height: clamp(320px, 42vw, 620px);
+}
+.rcase .gcase-hero-art .poster {
+  width: 100%;
+  max-width: 470px;
+  height: 100%;
+  object-fit: contain;
+  object-position: top right;
+  border-radius: 4px;
+}
+
+/* 2 · Poster + shopper split, full-bleed */
+.rcase-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+}
+.rcase-split img {
+  width: 100%;
+  height: clamp(300px, 40vw, 600px);
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 700px) {
+  .rcase-split { grid-template-columns: 1fr; }
+  .rcase-split img { height: auto; }
+}

@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { NavLink, Link, useLocation } from 'react-router-dom';
 import { useI18n } from '../../i18n/LangContext.jsx';
+import { asset } from '../../lib/asset.js';
 
 export default function Nav() {
   const { lang, setLang, t } = useI18n();
@@ -24,7 +25,7 @@ export default function Nav() {
     <>
       <nav className="nav" aria-label="Principale">
         <Link to="/" className="nav-brand" data-cursor="link" data-cursor-label="Home">
-          <span className="dot" />
+          <img className="nav-logo" src={asset('assets/logo-giulia-chiesi.webp')} alt="" aria-hidden="true" />
           GIULIA CHIESI
         </Link>
         <div className="nav-menu">
